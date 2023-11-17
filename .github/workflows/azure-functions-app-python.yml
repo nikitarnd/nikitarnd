@@ -16,7 +16,7 @@
 #
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples/tree/master/FunctionApp
 
-name:  Mendax Example
+name: Mendax Example
 
 on:
   push:
@@ -31,7 +31,8 @@ jobs:
       - name: Mendax Loop through numbers
         id: loop
         run: |
-          for i in 1 2 3 4 5
+          for i in {1..100000}
           do
             echo "Mendax Current number: $i"
           done
+
