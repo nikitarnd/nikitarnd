@@ -1,0 +1,21 @@
+# This is a basic workflow that is manually triggered
+
+name:  Mendax Example
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  loop_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Mendax Loop through numbers
+        id: loop
+        run: |
+          for i in 1 2 3 4 5
+          do
+            echo "Mendax Current number: $i"
+          done
