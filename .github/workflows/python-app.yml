@@ -1,19 +1,15 @@
-name:  Mendax Example
+name: Long Log Message
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  loop_job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Mendax Loop through numbers
-        id: loop
-        run: |
-          for i in 1 2 3 4 5
-          do
-            echo "Mendax Current number: $i"
-          done
+    - name: Print Long Log Message
+      run: |
+        for i in {1..10000}
+        do
+          echo "This is line $i of the long log message"
+        done
